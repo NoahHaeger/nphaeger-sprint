@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyPulse | Noah Haeger</title>
+  <meta
+    name="description"
+    content="StudyPulse helps students track study time and focus so they can study smarter, not just longer."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <div class="page-shell">
+    <header class="hero-card">
+      <div class="hero-icon" aria-hidden="true">📘</div>
+      <p class="eyebrow">BAIS 3300 Project</p>
+      <h1>StudyPulse</h1>
+      <p class="hero-text">
+        Track your study habits and focus. StudyPulse helps students measure
+        both study time and study quality so they can make better academic decisions.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="#tracker">Start Tracking</a>
+        <a class="button button-secondary" href="#features">View Features</a>
+      </div>
+
+      <p class="hero-meta">Created by Noah Haeger · Spring 2026</p>
+    </header>
+
+    <main id="main-content">
+      <section id="tracker" class="content-section" aria-labelledby="tracker-heading">
+        <div class="section-header">
+          <p class="section-label">Interactive tool</p>
+          <h2 id="tracker-heading">Study Session Tracker</h2>
+          <p class="section-text">
+            Log a study session below to track course time, duration, and focus level.
+          </p>
+        </div>
+
+        <div class="tracker-layout">
+          <div class="tracker-card">
+            <h3>Log a Session</h3>
+
+            <form id="study-form" novalidate>
+              <div class="form-group">
+                <label for="course">Course Name</label>
+                <input
+                  type="text"
+                  id="course"
+                  name="course"
+                  placeholder="Example: BAIS 3300"
+                  required
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="start-time">Start Time</label>
+                  <input type="datetime-local" id="start-time" name="start-time" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="end-time">End Time</label>
+                  <input type="datetime-local" id="end-time" name="end-time" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="focus">Focus Score (1–10)</label>
+                <input
+                  type="number"
+                  id="focus"
+                  name="focus"
+                  min="1"
+                  max="10"
+                  placeholder="Enter a score from 1 to 10"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="notes">Notes (optional)</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="4"
+                  placeholder="What went well? What distracted you?"
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="button button-primary">Save Session</button>
+                <button type="button" id="clear-all" class="button button-danger">Clear All Data</button>
+              </div>
+
+              <p id="form-message" class="form-message" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="tracker-card">
+            <h3>Study Summary</h3>
+
+            <div class="stats-grid">
+              <div class="stat-box">
+                <p class="stat-label">Total Sessions</p>
+                <p class="stat-value" id="total-sessions">0</p>
+              </div>
+
+              <div class="stat-box">
+                <p class="stat-label">Total Hours</p>
+                <p class="stat-value" id="total-hours">0.0</p>
+              </div>
+
+              <div class="stat-box">
+                <p class="stat-label">Average Focus</p>
+                <p class="stat-value" id="average-focus">0.0</p>
+              </div>
+
+              <div class="stat-box">
+                <p class="stat-label">Top Course</p>
+                <p class="stat-value" id="top-course">—</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="content-section alt-section" aria-labelledby="results-heading">
+        <div class="section-header">
+          <p class="section-label">Saved data</p>
+          <h2 id="results-heading">Recent Study Sessions</h2>
+          <p class="section-text">
+            Your latest logged sessions will appear here.
+          </p>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Hours</th>
+                <th>Focus</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody id="session-table-body">
+              <tr>
+                <td colspan="6" class="empty-state">No sessions logged yet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="features" class="content-section" aria-labelledby="features-heading">
+        <div class="section-header">
+          <p class="section-label">What it does</p>
+          <h2 id="features-heading">Key Features</h2>
+          <p class="section-text">
+            StudyPulse focuses on both time and quality so students can make better academic decisions.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">⏱️</div>
+            <h3>Log Study Sessions</h3>
+            <p>
+              Record study start and end times so students can track how long they spend preparing for each class.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎯</div>
+            <h3>Measure Focus</h3>
+            <p>
+              Add a focus score to each session to show that hours studied do not always equal quality studying.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📚</div>
+            <h3>Track by Course</h3>
+            <p>
+              Organize sessions by class to understand where time is going and whether effort is balanced.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📈</div>
+            <h3>View Results</h3>
+            <p>
+              Review your total sessions, total hours, average focus, and most-studied course.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="content-section alt-section" aria-labelledby="about-heading">
+        <div class="two-column">
+          <div>
+            <p class="section-label">Project concept</p>
+            <h2 id="about-heading">About StudyPulse</h2>
+            <p class="section-text">
+              This project was created as a BAIS 3300 product concept for students who want more than a timer.
+              StudyPulse is built around the idea that time studied and focus level should both be measured.
+            </p>
+            <p class="section-text">
+              The goal is to help students study smarter, reflect on their habits, and improve performance over time.
+            </p>
+          </div>
+
+          <aside class="info-panel" aria-labelledby="project-details-heading">
+            <h3 id="project-details-heading">Project Details</h3>
+            <ul class="info-list">
+              <li><strong>Student:</strong> Noah Haeger</li>
+              <li><strong>Course:</strong> BAIS 3300</li>
+              <li><strong>Sprint:</strong> Sprint 1</li>
+              <li><strong>Type:</strong> Study tracking tool</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>StudyPulse by Noah Haeger for BAIS 3300.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
