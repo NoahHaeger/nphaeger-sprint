@@ -1,0 +1,12 @@
+{
+  "name": "studypulse",
+  "version": "1.0.0",
+  "description": "StudyPulse BAIS 3300 project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
