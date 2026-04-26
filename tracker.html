@@ -1,31 +1,33 @@
-<!DOCTYPE html>
+]<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StudyPulse | Noah Haeger</title>
+  <title>StudyPulse | Tracker</title>
   <meta
     name="description"
-    content="StudyPulse helps students track study time and focus so they can study smarter, not just longer."
+    content="Use StudyPulse to track study sessions, focus scores, total hours, and course progress."
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
   <div class="page-shell">
     <header class="hero-card">
       <div class="hero-icon" aria-hidden="true">📘</div>
-      <p class="eyebrow">BAIS 3300 Project</p>
-      <h1>StudyPulse</h1>
+
+      <p class="eyebrow">Interactive Study Tool</p>
+      <h1>Study Session Tracker</h1>
+
       <p class="hero-text">
-        Track your study habits and focus. StudyPulse helps students measure
-        both study time and study quality so they can make better academic decisions.
+        Log each study session, measure your focus, and review your progress by course.
       </p>
 
       <div class="hero-actions">
         <a class="button button-primary" href="#tracker">Start Tracking</a>
-        <a class="button button-secondary" href="#features">View Features</a>
+        <a class="button button-secondary" href="index.html">Back Home</a>
       </div>
 
       <p class="hero-meta">Created by Noah Haeger · Spring 2026</p>
@@ -34,10 +36,10 @@
     <main id="main-content">
       <section id="tracker" class="content-section" aria-labelledby="tracker-heading">
         <div class="section-header">
-          <p class="section-label">Interactive tool</p>
+          <p class="section-label">Log your progress</p>
           <h2 id="tracker-heading">Study Session Tracker</h2>
           <p class="section-text">
-            Log a study session below to track course time, duration, and focus level.
+            Enter your course, study time, and focus score below.
           </p>
         </div>
 
@@ -60,12 +62,22 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="start-time">Start Time</label>
-                  <input type="datetime-local" id="start-time" name="start-time" required />
+                  <input
+                    type="datetime-local"
+                    id="start-time"
+                    name="start-time"
+                    required
+                  />
                 </div>
 
                 <div class="form-group">
                   <label for="end-time">End Time</label>
-                  <input type="datetime-local" id="end-time" name="end-time" required />
+                  <input
+                    type="datetime-local"
+                    id="end-time"
+                    name="end-time"
+                    required
+                  />
                 </div>
               </div>
 
@@ -93,8 +105,13 @@
               </div>
 
               <div class="form-actions">
-                <button type="submit" class="button button-primary">Save Session</button>
-                <button type="button" id="clear-all" class="button button-danger">Clear All Data</button>
+                <button type="submit" class="button button-primary">
+                  Save Session
+                </button>
+
+                <button type="button" id="clear-all" class="button button-danger">
+                  Clear All Data
+                </button>
               </div>
 
               <p id="form-message" class="form-message" aria-live="polite"></p>
@@ -134,7 +151,7 @@
           <p class="section-label">Saved data</p>
           <h2 id="results-heading">Recent Study Sessions</h2>
           <p class="section-text">
-            Your latest logged sessions will appear here.
+            Your latest logged study sessions will appear here.
           </p>
         </div>
 
@@ -150,9 +167,12 @@
                 <th>Notes</th>
               </tr>
             </thead>
+
             <tbody id="session-table-body">
               <tr>
-                <td colspan="6" class="empty-state">No sessions logged yet.</td>
+                <td colspan="6" class="empty-state">
+                  No sessions logged yet.
+                </td>
               </tr>
             </tbody>
           </table>
@@ -161,71 +181,45 @@
 
       <section id="features" class="content-section" aria-labelledby="features-heading">
         <div class="section-header">
-          <p class="section-label">What it does</p>
-          <h2 id="features-heading">Key Features</h2>
+          <p class="section-label">What it tracks</p>
+          <h2 id="features-heading">Your Study Insights</h2>
           <p class="section-text">
-            StudyPulse focuses on both time and quality so students can make better academic decisions.
+            StudyPulse helps you understand both study quantity and study quality.
           </p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">⏱️</div>
-            <h3>Log Study Sessions</h3>
+            <h3>Study Time</h3>
             <p>
-              Record study start and end times so students can track how long they spend preparing for each class.
+              Track how long each study session lasts and how much time you spend per course.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">🎯</div>
-            <h3>Measure Focus</h3>
+            <h3>Focus Level</h3>
             <p>
-              Add a focus score to each session to show that hours studied do not always equal quality studying.
+              Rate each session from 1 to 10 to measure how productive your study time was.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">📚</div>
-            <h3>Track by Course</h3>
+            <h3>Course Balance</h3>
             <p>
-              Organize sessions by class to understand where time is going and whether effort is balanced.
+              See which course receives the most study time so you can balance your workload.
             </p>
           </article>
 
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">📈</div>
-            <h3>View Results</h3>
+            <h3>Progress Review</h3>
             <p>
-              Review your total sessions, total hours, average focus, and most-studied course.
+              Review total sessions, total hours, average focus, and your top course.
             </p>
           </article>
-        </div>
-      </section>
-
-      <section id="about" class="content-section alt-section" aria-labelledby="about-heading">
-        <div class="two-column">
-          <div>
-            <p class="section-label">Project concept</p>
-            <h2 id="about-heading">About StudyPulse</h2>
-            <p class="section-text">
-              This project was created as a BAIS 3300 product concept for students who want more than a timer.
-              StudyPulse is built around the idea that time studied and focus level should both be measured.
-            </p>
-            <p class="section-text">
-              The goal is to help students study smarter, reflect on their habits, and improve performance over time.
-            </p>
-          </div>
-
-          <aside class="info-panel" aria-labelledby="project-details-heading">
-            <h3 id="project-details-heading">Project Details</h3>
-            <ul class="info-list">
-              <li><strong>Student:</strong> Noah Haeger</li>
-              <li><strong>Course:</strong> BAIS 3300</li>
-              <li><strong>Sprint:</strong> Sprint 1</li>
-              <li><strong>Type:</strong> Study tracking tool</li>
-            </ul>
-          </aside>
         </div>
       </section>
     </main>
