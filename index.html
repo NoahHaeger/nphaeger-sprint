@@ -3,148 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>StudyPulse | Welcome</title>
-
-  <meta
-    name="description"
-    content="StudyPulse helps students track study time, focus, and course progress so they can study smarter."
-  />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  >
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <div class="page-shell">
-    <nav class="navbar">
-      <a class="logo" href="index.html">
-        <span class="logo-icon">📘</span>
-        <span>StudyPulse</span>
-      </a>
+    <header class="simple-hero">
+      <p class="eyebrow">BAIS 3300 Project</p>
 
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a class="nav-button" href="tracker.html">Open App</a>
-      </div>
-    </nav>
+      <h1>Study smarter, not just longer.</h1>
 
-    <header class="landing-hero">
-      <div class="hero-content">
-        <p class="eyebrow">BAIS 3300 Project</p>
+      <p class="hero-text">
+        StudyPulse helps students track study time, measure focus, and understand
+        which courses need the most attention.
+      </p>
 
-        <h1>Study smarter, not just longer.</h1>
-
-        <p class="hero-text">
-          StudyPulse helps students track study time, measure focus, and understand
-          which courses need the most attention.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="tracker.html">Enter App</a>
-          <a class="button button-secondary" href="#features">View Features</a>
-        </div>
-
-        <p class="hero-meta">Created by Noah Haeger · Spring 2026</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="tracker.html">Open App</a>
+        <a class="button button-secondary" href="#features">View Features</a>
       </div>
 
-      <div class="hero-preview" aria-label="StudyPulse app preview">
-        <div class="preview-top">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <div class="preview-card">
-          <p class="preview-label">Today’s Progress</p>
-          <h2>3.5 Hours</h2>
-
-          <div class="preview-stat">
-            <span>Average Focus</span>
-            <strong>8.4 / 10</strong>
-          </div>
-
-          <div class="preview-stat">
-            <span>Top Course</span>
-            <strong>BAIS 3300</strong>
-          </div>
-
-          <div class="preview-bar">
-            <div></div>
-          </div>
-        </div>
-      </div>
+      <p class="hero-meta">Created by Noah Haeger · Spring 2026</p>
     </header>
 
     <main>
       <section id="features" class="content-section">
         <div class="section-header">
           <p class="section-label">Features</p>
-          <h2>Everything you need to understand your study habits.</h2>
+          <h2>What StudyPulse Tracks</h2>
           <p class="section-text">
-            StudyPulse focuses on both the amount of time studied and the quality of that time.
+            A simple way to understand both study time and study quality.
           </p>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
-            <div class="feature-icon">⏱️</div>
             <h3>Track Time</h3>
-            <p>Log start and end times for each study session.</p>
+            <p>Log start and end times for every study session.</p>
           </article>
 
           <article class="feature-card">
-            <div class="feature-icon">🎯</div>
             <h3>Measure Focus</h3>
-            <p>Rate each session from 1 to 10 based on study quality.</p>
+            <p>Rate each session from 1 to 10 based on how productive it was.</p>
           </article>
 
           <article class="feature-card">
-            <div class="feature-icon">📚</div>
-            <h3>Organize by Course</h3>
-            <p>See which classes receive the most study time.</p>
+            <h3>Review Courses</h3>
+            <p>See which course receives the most study time.</p>
           </article>
 
           <article class="feature-card">
-            <div class="feature-icon">📈</div>
-            <h3>Review Progress</h3>
-            <p>View total sessions, total hours, average focus, and top course.</p>
+            <h3>View Progress</h3>
+            <p>Review total sessions, total hours, average focus, and top course.</p>
           </article>
         </div>
       </section>
 
-      <section id="about" class="content-section alt-section">
-        <div class="two-column">
-          <div>
-            <p class="section-label">Why StudyPulse?</p>
-            <h2>Better study decisions start with better data.</h2>
-            <p class="section-text">
-              Most students know how long they study, but not how productive that time actually was.
-              StudyPulse combines study duration with focus level to help students reflect, adjust,
-              and improve their academic habits.
-            </p>
+      <section class="content-section alt-section">
+        <div class="section-header">
+          <p class="section-label">Get Started</p>
+          <h2>Ready to track your study habits?</h2>
+          <p class="section-text">
+            Open the tracker and begin logging your first study session.
+          </p>
 
-            <div class="hero-actions left-actions">
-              <a class="button button-primary" href="tracker.html">Start Tracking</a>
-            </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="tracker.html">Open Study Tracker</a>
           </div>
-
-          <aside class="info-panel">
-            <h3>Project Details</h3>
-            <ul class="info-list">
-              <li><strong>Student:</strong> Noah Haeger</li>
-              <li><strong>Course:</strong> BAIS 3300</li>
-              <li><strong>Term:</strong> Spring 2026</li>
-              <li><strong>Product:</strong> Study tracking tool</li>
-            </ul>
-          </aside>
         </div>
       </section>
     </main>
